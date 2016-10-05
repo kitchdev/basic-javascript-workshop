@@ -184,3 +184,14 @@ console.log(uniqArray([1,2,3,7,3,5],[1,1,3,9,8]))
 The function should return a new array that maps every element of the input 
 array by passing it through the function you received. */
 
+function mapper(arr, funct){
+    var newArr = [];
+    for(var i = 0; i <arr.length; i++){
+    newArr.push(funct(arr[i]));
+    }
+    return newArr;
+}
+console.log(mapper([1,2,3,4,2], function(n){
+  return n + 5;
+}));
+
